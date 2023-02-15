@@ -1,0 +1,223 @@
+@font-face {
+   font-family: "Suisse Intl Regular";
+   src: url("/fonts/SuisseIntl-Regular-WebS.woff2") format('woff2'),
+        url("/fonts/SuisseIntl-Regular-WebS.woff") format('woff');
+}
+
+@font-face {
+   font-family: "Suisse Intl Italic";
+   src: url("/fonts/SuisseIntl-RegularItalic-WebS.woff2") format('woff2'),
+   url("/fonts/SuisseIntl-RegularItalic-WebS.woff") format('woff');
+}
+
+@font-face {
+   font-family: "Suisse Intl Light";
+   src: url("/fonts/SuisseIntl-Light-WebS.woff2") format('woff2'),
+   url("/fonts/SuisseIntl-Light-WebS.woff") format('woff');
+}
+
+html {
+        overflow-y: scroll;
+        /* needs to be min-height: 100% instead of height: 100%. doing height: 100% can cause a bug when doing scroll in jQuery for html,body  */
+        min-height: 100%;
+        /* prevent anchor font size from changing when rotating iphone to landscape mode */
+        /* also: https://stackoverflow.com/questions/49589861/is-there-a-non-hacky-way-to-prevent-pinch-zoom-on-ios-11-3-safari */
+        -webkit-text-size-adjust: none;
+        /* prevent overflow while loading */
+        overflow-x: hidden !important;
+    }
+
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #ffffff;
+   color: #000;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding:0;
+}
+a {
+   color: #000;
+   text-decoration: none;
+   transition: all .2s ease;
+}
+
+a:hover {
+   color: #fc2803;
+}
+
+header {
+   position: fixed;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   font-family: "Suisse Intl Regular", "Helvetica", sans serif;
+  /* background-color: rgb(238, 220, 57);*/
+   padding-left: 1rem;
+   padding-right: 1rem;
+   padding-top:1rem;
+   z-index: 10;
+}
+
+header span {
+   font-size: 16px;
+}
+
+header nav {
+   right: 1.5rem;
+}
+
+header ul {
+   display: flex;
+}
+
+header nav a {
+   padding: 1rem 1rem;
+}
+
+footer {
+   position: fixed;
+   bottom: 0;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   font-family: "Suisse Intl Regular", "Helvetica", sans serif;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   padding-bottom:1rem;
+   z-index: 10;
+}
+
+main {
+   width: 100%;
+   padding-left:1rem;
+   padding-right:1rem;
+   /*background-color: coral;*/
+   justify-content: center;
+}
+
+img {
+   width: 100%;
+}
+
+.portfolio {
+   /*background-color: aquamarine;*/
+   margin:0 auto;
+   padding-top:6rem;
+   padding-bottom:3rem;
+   justify-content: center;
+}
+
+.project {
+   margin: 0 auto 2.5rem;
+   max-width: 60rem;
+   justify-content: center;
+   /*background-color: brown;*/
+}
+
+.caption {
+   font-family: "Suisse Intl Regular", "Helvetica", sans serif;
+   font-size: .75rem;
+   text-align: left;
+}
+
+.caption a{
+   color:rgb(167, 167, 167);
+}
+
+.caption a:hover{
+   color:#fc2803;
+}
+
+
+/*.slider img {
+   max-width:auto;
+   max-height:100%;
+   object-fit: contain;
+} */
+
+.project-info {
+   display: flex;
+   justify-content:space-between;
+   flex-flow: row wrap;
+   margin:0 auto;
+   padding-top:6rem;
+   padding-bottom:3rem;
+}
+
+.project-detail {
+   flex:65%;
+}
+
+.project-detail .images {
+   padding-top:4.8rem;
+}
+
+.project-detail img {
+   max-height:40rem;
+   object-fit: contain;
+}
+
+.project-info .caption {
+   font-family: "Suisse Intl Regular", "Helvetica", sans serif;
+   font-size: .85rem;
+   line-height: 1.15rem;
+   text-align: left;
+   padding-right:1rem;
+   min-width:20rem;
+   flex:35%;
+}
+
+.about {
+   margin:0 0 auto 0;
+   max-width: 60rem;
+   padding-top: 3rem;
+   /*background-color: aqua;*/
+}
+
+.legal-notice {
+   margin-top:0;
+   margin-left:0;
+   margin-right:auto;
+   margin-bottom:3rem;
+   padding-top:3rem;
+   max-width: 40rem;
+}
+
+.about #info, #experience{
+   font-family: "Suisse Intl Regular", "Helvetica", sans serif;
+   line-height: 1.4;
+   font-size: .75rem;
+   margin-bottom: 1rem;
+}
+
+
+.legal-notice #imprint{
+   font-family: "Suisse Intl Regular", "Helvetica", sans serif;
+   line-height: 1.4;
+   font-size: .75rem;
+   margin-bottom: 1rem;
+}
+
+/*
+#tooltip {
+   opacity: 0;
+   font-family: "Suisse Intl Regular", "Helvetica", sans serif;
+   font-size: 1rem;
+   position: absolute;
+   color: #000;
+   top: 0;
+   left: 2rem;
+   z-index: 10;
+ }
+ #POT:hover #tooltip {
+   opacity: 1;
+ } */
